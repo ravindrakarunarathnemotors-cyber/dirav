@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dirav Labs | ERP, POS &amp; Ecommerce for your business</title>
+  <meta name="description" content="Dirav Labs ERP: POS, inventory, orders, delivery, accounts and your own webstore in one system.">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-pos" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 4h14v12H1zM15 9h4l3 4v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2M17 3a4 4 0 0 1 0 8M22 21v-2a5 5 0 0 0-3-4.6"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8zM6 6L5 2H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></symbol>
+      <symbol id="i-food" viewBox="0 0 24 24"><path d="M4 2v8a3 3 0 0 0 6 0V2M7 2v20M17 2c-2 2-3 5-3 8h3v12"/></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.3A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
+      <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Dirav Labs home">
+        <img src="assets/logo-wordmark-dark.png" alt="Dirav Labs">
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Packages</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-ghost">Login</a>
+        <a href="#contact" class="btn btn-primary">Free demo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg class="ico"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- Scene 1: soft blue gradient blobs -->
+        <div class="bg-scene active">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+        <!-- Scene 2: aurora waves -->
+        <div class="bg-scene">
+          <div class="aurora a1"></div>
+          <div class="aurora a2"></div>
+          <div class="aurora a3"></div>
+        </div>
+        <!-- Scene 3: moving dots + light beams -->
+        <div class="bg-scene">
+          <div class="dots-field"></div>
+          <div class="beam b1"></div>
+          <div class="beam b2"></div>
+          <div class="beam b3"></div>
+        </div>
+        <div class="grid-lines"></div>
+      </div>
+      <div class="bg-pager" role="group" aria-label="Hero background">
+        <button class="active" aria-label="Background 1"></button>
+        <button aria-label="Background 2"></button>
+        <button aria-label="Background 3"></button>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow reveal"><span class="dot"></span> ERP · POS · Ecommerce</span>
+          <h1 class="reveal">Run your <span class="rotator" id="rotator">shop</span><br>from one smart system.</h1>
+          <p class="lead reveal">Sales, stock, orders, delivery, staff and accounts, connected to your own online store. Built in Sri Lanka for Sri Lankan businesses.</p>
+          <div class="hero-actions reveal">
+            <a href="#pricing" class="btn btn-primary btn-lg">See packages <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a href="#contact" class="btn btn-ghost btn-lg">Book a free demo</a>
+          </div>
+          <ul class="hero-points reveal">
+            <li><svg class="ico"><use href="#i-check"/></svg> Free setup &amp; training</li>
+            <li><svg class="ico"><use href="#i-check"/></svg> Works on phone, tablet &amp; PC</li>
+            <li><svg class="ico"><use href="#i-check"/></svg> Local support</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="app tilt" id="tilt">
+            <!-- window bar -->
+            <div class="app-bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="url"><svg class="ico"><use href="#i-shield"/></svg>app.diravlabs.com/dashboard</span>
+            </div>
+            <div class="app-body">
+              <!-- mini sidebar -->
+              <aside class="app-side">
+                <img src="assets/logo-mark.png" alt="" class="app-logo">
+                <span class="s-ico on"><svg class="ico"><use href="#i-chart"/></svg></span>
+                <span class="s-ico"><svg class="ico"><use href="#i-pos"/></svg></span>
+                <span class="s-ico"><svg class="ico"><use href="#i-cart"/></svg></span>
+                <span class="s-ico"><svg class="ico"><use href="#i-box"/></svg></span>
+                <span class="s-ico"><svg class="ico"><use href="#i-truck"/></svg></span>
+                <span class="s-ico"><svg class="ico"><use href="#i-users"/></svg></span>
+              </aside>
+
+              <div class="app-main">
+                <div class="app-head">
+                  <div><small>Monday, 20 Oct</small><b>Good morning, Kasun</b></div>
+                  <span class="branch">Colombo 07 branch</span>
+                  <span class="avatar">KP</span>
+                </div>
+
+                <div class="kpi-row">
+                  <div class="kpi k-blue"><span class="k-ico"><svg class="ico"><use href="#i-chart"/></svg></span><small>Today's sales</small><b>LKR <span class="count" data-to="248500">0</span></b><em class="up">▲ 12.4%</em></div>
+                  <div class="kpi k-green"><span class="k-ico"><svg class="ico"><use href="#i-zap"/></svg></span><small>Gross profit</small><b>LKR <span class="count" data-to="61200">0</span></b><em class="up">▲ 8.1%</em></div>
+                  <div class="kpi k-purple"><span class="k-ico"><svg class="ico"><use href="#i-cart"/></svg></span><small>Orders</small><b class="count" data-to="86">0</b><em class="up">▲ 9 new</em></div>
+                  <div class="kpi k-orange"><span class="k-ico"><svg class="ico"><use href="#i-box"/></svg></span><small>Low stock</small><b class="count" data-to="14">0</b><em class="down">5 critical</em></div>
+                </div>
+
+                <div class="app-grid">
+                  <div class="card chart-card">
+                    <div class="card-h"><b>Revenue</b><span class="legend"><i class="l-blue"></i>This week <i class="l-teal"></i>Last week</span></div>
+                    <svg class="area" viewBox="0 0 300 120" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a8cf0" stop-opacity=".35"/><stop offset="1" stop-color="#2a8cf0" stop-opacity="0"/></linearGradient>
+                      </defs>
+                      <g class="gridl"><line x1="0" y1="30" x2="300" y2="30"/><line x1="0" y1="60" x2="300" y2="60"/><line x1="0" y1="90" x2="300" y2="90"/></g>
+                      <path class="fill" d="M0 92 C25 88 35 70 50 72 S85 84 100 66 S135 40 150 48 S185 62 200 44 S235 14 250 22 S285 30 300 18 V120 H0Z" fill="url(#gBlue)"/>
+                      <path class="line-b" pathLength="1" d="M0 92 C25 88 35 70 50 72 S85 84 100 66 S135 40 150 48 S185 62 200 44 S235 14 250 22 S285 30 300 18"/>
+                      <path class="line-t" pathLength="1" d="M0 100 C25 96 35 90 50 86 S85 92 100 80 S135 70 150 74 S185 78 200 64 S235 56 250 58 S285 52 300 46"/>
+                      <circle class="pt" cx="250" cy="22" r="4"/>
+                    </svg>
+                    <div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                  </div>
+
+                  <div class="card donut-card">
+                    <div class="card-h"><b>Sales channels</b></div>
+                    <div class="donut-body">
+                    <div class="donut"><span><b>86</b><small>orders</small></span></div>
+                    <ul class="ch-list">
+                      <li><i style="background:#2a8cf0"></i>POS<b>48%</b></li>
+                      <li><i style="background:#14b8a6"></i>Webstore<b>32%</b></li>
+                      <li><i style="background:#8b5cf6"></i>Phone<b>12%</b></li>
+                      <li><i style="background:#f59e0b"></i>Wholesale<b>8%</b></li>
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card orders-card">
+                  <div class="card-h"><b>Recent orders</b><span class="link">View all</span></div>
+                  <div class="o-row"><span class="av" style="background:#dbeafe;color:#1d4ed8">NP</span><div><b>Nimal Perera</b><small>#10482 · Webstore</small></div><span class="amt-s">12,450</span><span class="st st-blue">Shipping</span></div>
+                  <div class="o-row"><span class="av" style="background:#dcfce7;color:#15803d">DF</span><div><b>Dilini Fernando</b><small>#10481 · POS</small></div><span class="amt-s">3,280</span><span class="st st-green">Paid</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card fc-1"><span class="fc-ico fc-green"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Payment received</b><small id="toastText">Card · LKR 12,450</small></div></div>
+          <div class="float-card fc-2"><span class="fc-ico fc-orange"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Stock alert</b><small>Basmati rice 5kg · 4 left</small></div></div>
+          <div class="float-card fc-3"><span class="fc-ico fc-purple"><svg class="ico"><use href="#i-store"/></svg></span><div><b>+3 webstore orders</b><small>in the last hour</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><b><span class="count" data-to="20">0</span>+</b><span>Business modules</span></div>
+        <div class="stat reveal"><b><span class="count" data-to="1">0</span></b><span>System for shop &amp; online</span></div>
+        <div class="stat reveal"><b><span class="count" data-to="24">0</span>/7</b><span>Cloud access</span></div>
+        <div class="stat reveal"><b><span class="count" data-to="100">0</span>%</b><span>Your data, your business</span></div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Features</span>
+          <h2>Everything your business needs, in one place</h2>
+          <p>Stop juggling spreadsheets, a separate POS and a separate website. One login, one set of data.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-pos"/></svg></span><h3>POS billing</h3><p>Fast checkout with barcode, printed receipts, cash and card, across multiple counters.</p></article>
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-box"/></svg></span><h3>Inventory &amp; stock</h3><p>Live stock across branches, reorder alerts, batches and expiry dates.</p></article>
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-store"/></svg></span><h3>Your own webstore</h3><p>An online shop that shares products, prices and stock with your ERP automatically.</p></article>
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-truck"/></svg></span><h3>Orders &amp; delivery</h3><p>Track every order from website, phone or shop until it reaches the customer.</p></article>
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-chart"/></svg></span><h3>Accounts &amp; reports</h3><p>Daily sales, profit, receivables and payables, ready when you need them.</p></article>
+          <article class="feature reveal"><span class="f-ico"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Staff &amp; permissions</h3><p>Employees, attendance and roles, so each person sees only what they should.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODULES MARQUEE ===== -->
+    <section class="section section-alt" id="modules">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Modules</span>
+          <h2>20+ modules. Switch on what you need.</h2>
+          <p>Start small and add modules as your business grows.</p>
+        </div>
+      </div>
+      <div class="marquee" aria-label="Modules list">
+        <div class="marquee-track">
+          <span>Products</span><span>Inventory</span><span>Orders</span><span>Delivery</span><span>Customers</span><span>Webstore</span><span>Reports</span><span>Sales</span><span>Purchasing</span>
+          <span aria-hidden="true">Products</span><span aria-hidden="true">Inventory</span><span aria-hidden="true">Orders</span><span aria-hidden="true">Delivery</span><span aria-hidden="true">Customers</span><span aria-hidden="true">Webstore</span><span aria-hidden="true">Reports</span><span aria-hidden="true">Sales</span><span aria-hidden="true">Purchasing</span>
+        </div>
+      </div>
+      <div class="marquee reverse" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Employees</span><span>Restaurant</span><span>Accounts</span><span>Users &amp; roles</span><span>Service</span><span>POS</span><span>Logs</span><span>Settings</span><span>API &amp; plugins</span>
+          <span>Employees</span><span>Restaurant</span><span>Accounts</span><span>Users &amp; roles</span><span>Service</span><span>POS</span><span>Logs</span><span>Settings</span><span>API &amp; plugins</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INDUSTRIES (tabs) ===== -->
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Industries</span>
+          <h2>Made for the way you work</h2>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="Industries">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="retail"><svg class="ico"><use href="#i-cart"/></svg> Retail &amp; grocery</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="food"><svg class="ico"><use href="#i-food"/></svg> Restaurants</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="whole"><svg class="ico"><use href="#i-truck"/></svg> Wholesale</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="service"><svg class="ico"><use href="#i-tool"/></svg> Services</button>
+        </div>
+        <div class="tab-panels reveal">
+          <div class="panel active" id="tab-retail" role="tabpanel">
+            <div><h3>Retail &amp; grocery shops</h3><p>Bill customers in seconds, know exactly what is on your shelves, and sell the same stock online.</p>
+              <ul class="ticks"><li>Barcode POS with receipt printing</li><li>Low stock and expiry alerts</li><li>Loyalty and customer credit</li><li>Webstore with home delivery</li></ul></div>
+            <div class="panel-art"><svg class="ico big"><use href="#i-cart"/></svg></div>
+          </div>
+          <div class="panel" id="tab-food" role="tabpanel">
+            <div><h3>Restaurants &amp; cafés</h3><p>Take orders by table, send them to the kitchen and track takeaway and delivery in one screen.</p>
+              <ul class="ticks"><li>Table and KOT management</li><li>Menu and recipe costing</li><li>Online food orders</li><li>Daily sales and wastage reports</li></ul></div>
+            <div class="panel-art"><svg class="ico big"><use href="#i-food"/></svg></div>
+          </div>
+          <div class="panel" id="tab-whole" role="tabpanel">
+            <div><h3>Wholesale &amp; distribution</h3><p>Manage suppliers, bulk orders, credit customers and delivery routes without paper.</p>
+              <ul class="ticks"><li>Purchase orders and GRN</li><li>Customer credit limits</li><li>Delivery routes and drivers</li><li>Receivables and payables</li></ul></div>
+            <div class="panel-art"><svg class="ico big"><use href="#i-truck"/></svg></div>
+          </div>
+          <div class="panel" id="tab-service" role="tabpanel">
+            <div><h3>Service businesses</h3><p>Book jobs, assign technicians, bill customers and keep a full service history.</p>
+              <ul class="ticks"><li>Job cards and bookings</li><li>Technician scheduling</li><li>Service invoices and warranties</li><li>Customer history</li></ul></div>
+            <div class="panel-art"><svg class="ico big"><use href="#i-tool"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">How it works</span>
+          <h2>Up and running in days, not months</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span class="step-n">01</span><svg class="ico"><use href="#i-headset"/></svg><h3>Free demo</h3><p>We show you the system with your own products and answer every question.</p></div>
+          <div class="step reveal"><span class="step-n">02</span><svg class="ico"><use href="#i-cloud"/></svg><h3>Setup &amp; data</h3><p>We set up your branches, import your products and connect your webstore.</p></div>
+          <div class="step reveal"><span class="step-n">03</span><svg class="ico"><use href="#i-zap"/></svg><h3>Go live</h3><p>Your team is trained and you start selling. We stay with you for support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Packages</span>
+          <h2>Simple, honest pricing</h2>
+          <p>Setup, training and local support included in every package.</p>
+          <div class="billing" role="group" aria-label="Billing period">
+            <button class="bill active" data-bill="monthly">Monthly</button>
+            <button class="bill" data-bill="yearly">Yearly <em>2 months free</em></button>
+          </div>
+        </div>
+
+        <!-- EDIT PRICES HERE: data-monthly / data-yearly -->
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Starter</h3>
+            <p class="plan-tag">For a single shop getting started</p>
+            <div class="price"><span class="amt" data-monthly="LKR 0,000" data-yearly="LKR 00,000">LKR 0,000</span><span class="per">/ month</span></div>
+            <a href="#contact" class="btn btn-ghost btn-block">Start with Starter</a>
+            <ul class="ticks">
+              <li>1 branch, 2 users</li><li>POS billing</li><li>Products &amp; inventory</li><li>Customers</li><li>Basic sales reports</li><li>Email support</li>
+            </ul>
+          </article>
+
+          <article class="plan popular reveal">
+            <span class="badge">Most popular</span>
+            <h3>Business</h3>
+            <p class="plan-tag">Shop + online store, growing team</p>
+            <div class="price"><span class="amt" data-monthly="LKR 0,000" data-yearly="LKR 00,000">LKR 0,000</span><span class="per">/ month</span></div>
+            <a href="#contact" class="btn btn-primary btn-block">Choose Business</a>
+            <ul class="ticks">
+              <li>Up to 3 branches, 10 users</li><li>Everything in Starter</li><li>Webstore with your domain</li><li>Orders &amp; delivery</li><li>Purchasing &amp; suppliers</li><li>Accounts &amp; full reports</li><li>Phone &amp; WhatsApp support</li>
+            </ul>
+          </article>
+
+          <article class="plan reveal">
+            <h3>Enterprise</h3>
+            <p class="plan-tag">Multi-branch and custom needs</p>
+            <div class="price"><span class="amt" data-monthly="Custom" data-yearly="Custom">Custom</span><span class="per"></span></div>
+            <a href="#contact" class="btn btn-ghost btn-block">Talk to us</a>
+            <ul class="ticks">
+              <li>Unlimited branches &amp; users</li><li>Everything in Business</li><li>Employees &amp; payroll</li><li>Restaurant or service module</li><li>API &amp; plugins</li><li>Custom features</li><li>Dedicated support</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="addons reveal">
+          <h3><svg class="ico"><use href="#i-plus"/></svg> Add-ons</h3>
+          <div class="addon-grid">
+            <div><span>Extra branch</span><b>LKR 0,000</b></div>
+            <div><span>Extra user</span><b>LKR 000</b></div>
+            <div><span>Restaurant module</span><b>LKR 0,000</b></div>
+            <div><span>SMS notifications</span><b>LKR 000</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="kicker">FAQ</span>
+          <h2>Questions people ask</h2>
+        </div>
+        <div class="faq">
+          <details class="reveal"><summary>Do I need to install anything?</summary><p>No. Dirav ERP runs in the browser, on a PC, tablet or phone. For POS we can help you connect a barcode scanner and receipt printer.</p></details>
+          <details class="reveal"><summary>Can I move my existing products and customers?</summary><p>Yes. Send us your Excel sheets and our team imports them during setup.</p></details>
+          <details class="reveal"><summary>Is my data safe?</summary><p>Your data is stored on secure cloud servers with daily backups, and every user has their own login and permissions.</p></details>
+          <details class="reveal"><summary>Can I change my package later?</summary><p>Yes. You can upgrade or add modules at any time as your business grows.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <span class="kicker">Get started</span>
+            <h2>Book a free demo</h2>
+            <p>Tell us about your business and we will show you the system with your own products.</p>
+            <ul class="contact-list">
+              <li><svg class="ico"><use href="#i-phone"/></svg> <a href="tel:+94000000000">+94 00 000 0000</a></li>
+              <li><svg class="ico"><use href="#i-mail"/></svg> <a href="mailto:hello@diravlabs.com">hello@diravlabs.com</a></li>
+              <li><svg class="ico"><use href="#i-pin"/></svg> Your address, Sri Lanka</li>
+            </ul>
+          </div>
+          <form class="contact-form" id="demoForm">
+            <label>Your name<input type="text" name="name" required></label>
+            <label>Phone number<input type="tel" name="phone" required></label>
+            <div class="row2">
+              <label>Business type
+                <select name="type"><option>Retail / grocery</option><option>Restaurant / café</option><option>Wholesale</option><option>Service</option><option>Other</option></select>
+              </label>
+              <label>Package
+                <select name="package"><option>Starter</option><option>Business</option><option>Enterprise</option><option>Not sure yet</option></select>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Request demo <svg class="ico"><use href="#i-arrow"/></svg></button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-wordmark-light.png" alt="Dirav Labs">
+        <p>ERP, POS and ecommerce for growing businesses.</p>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Product</h4><a href="#features">Features</a><a href="#modules">Modules</a><a href="#pricing">Packages</a></div>
+        <div><h4>Company</h4><a href="#contact">Contact</a><a href="#faq">FAQ</a><a href="#">User guide</a></div>
+        <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="year"></span> Dirav Labs. All rights reserved.</div>
+  </footer>
+
+  <a href="#top" class="to-top" id="toTop" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
