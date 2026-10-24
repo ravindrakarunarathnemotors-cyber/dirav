@@ -3,6 +3,12 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
 
+  // Select a package in the demo form
+  function pickPackage(name) {
+    const r = $$('#demoForm input[name="package"]').find((x) => x.value === name);
+    if (r) r.checked = true;
+  }
+
   // Footer year
   $('#year').textContent = new Date().getFullYear();
 
@@ -162,6 +168,54 @@
     });
   });
 
+  // Module builder: toggle modules, presets, live summary
+  const mods = $$('.mod');
+  if (mods.length) {
+    const presets = {
+      retail: ['pos', 'sales', 'customers', 'loyalty', 'webstore', 'orders', 'purchasing', 'accounts', 'roles'],
+      restaurant: ['pos', 'restaurant', 'customers', 'orders', 'delivery', 'purchasing', 'employees', 'expenses'],
+      wholesale: ['sales', 'customers', 'purchasing', 'orders', 'delivery', 'accounts', 'expenses', 'roles', 'logs'],
+      service: ['sales', 'customers', 'service', 'employees', 'accounts', 'expenses'],
+      all: mods.map((m) => m.dataset.mod)
+    };
+    const fg = $('#ringFg');
+    const C = 2 * Math.PI * 52;
+    const render = () => {
+      const on = mods.filter((m) => m.classList.contains('on'));
+      $('#modCount').textContent = on.length;
+      fg.style.strokeDashoffset = C * (1 - on.length / mods.length);
+      $('#setupChips').innerHTML = on.map((m) => `<span>${$('b', m).firstChild.textContent}</span>`).join('');
+      const web = on.some((m) => m.dataset.mod === 'webstore');
+      $('#setupPlan').textContent = on.length > 14 ? 'Enterprise' : web ? 'POS + Webstore' : 'POS';
+      $$('.mod-group').forEach((g) => {
+        const all = $$('.mod', g);
+        $('.mg-count', g).textContent = `${all.filter((m) => m.classList.contains('on')).length} / ${all.length} on`;
+      });
+    };
+    const set = (m, v) => {
+      if (m.classList.contains('core')) return;
+      if (m.classList.contains('on') !== v) { m.classList.remove('pop'); void m.offsetWidth; m.classList.add('pop'); }
+      m.classList.toggle('on', v);
+      m.setAttribute('aria-checked', v);
+    };
+    mods.forEach((m) => m.addEventListener('click', () => {
+      set(m, !m.classList.contains('on'));
+      $$('.preset').forEach((p) => p.classList.remove('active'));
+      render();
+    }));
+    $$('.preset').forEach((p) => p.addEventListener('click', () => {
+      const list = presets[p.dataset.preset];
+      mods.forEach((m) => set(m, list.includes(m.dataset.mod)));
+      $$('.preset').forEach((x) => x.classList.toggle('active', x === p));
+      render();
+    }));
+    // Carry the chosen package into the demo form
+    $('#setupCta').addEventListener('click', () => {
+      pickPackage($('#setupPlan').textContent);
+    });
+    $('.preset[data-preset="retail"]').click();
+  }
+
   // Industry tabs
   $$('.tab').forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -170,10 +224,40 @@
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
       $('#tab-' + tab.dataset.tab).classList.add('active');
+      tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     });
   });
 
-  // Monthly / yearly pricing toggle
+  // Package buttons pick that package in the demo form
+  $$('[data-plan]').forEach((a) => a.addEventListener('click', () => {
+    pickPackage(a.dataset.plan);
+  }));
+
+  // FAQ: category filter, and keep one answer open at a time
+  const fqs = $$('.fq');
+  $$('.fc').forEach((b) => b.addEventListener('click', () => {
+    $$('.fc').forEach((x) => x.classList.toggle('active', x === b));
+    fqs.forEach((f) => { f.hidden = b.dataset.cat !== 'all' && f.dataset.cat !== b.dataset.cat; });
+  }));
+  fqs.forEach((f) => f.addEventListener('toggle', () => {
+    if (f.open) fqs.forEach((o) => { if (o !== f) o.open = false; });
+  }));
+
+  // Monthly / yearly pricing toggle with a sliding pill
+  const billing = $('.billing');
+  const pill = $('.bill-pill');
+  const movePill = () => {
+    const b = $('.bill.active');
+    if (!b || !pill) return;
+    pill.style.setProperty('--pw', b.offsetWidth + 'px');
+    pill.style.setProperty('--px', b.offsetLeft - 5 + 'px');
+  };
+  movePill();
+  window.addEventListener('resize', movePill);
+  $$('.bill').forEach((btn) => btn.addEventListener('click', () => {
+    setTimeout(movePill);
+    $('#pricing').classList.toggle('pricing-yearly', btn.dataset.bill === 'yearly');
+  }));
   $$('.bill').forEach((btn) => {
     btn.addEventListener('click', () => {
       const mode = btn.dataset.bill;
@@ -192,11 +276,11 @@
   });
 
   // Demo form: opens WhatsApp with the details (change the number below)
-  const WHATSAPP_NUMBER = '94000000000';
+  const WHATSAPP_NUMBER = '94741112504';
   $('#demoForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(e.target);
-    const msg = `Hi Dirav Labs, I'd like a demo.\nName: ${d.get('name')}\nPhone: ${d.get('phone')}\nBusiness: ${d.get('type')}\nPackage: ${d.get('package')}`;
+    const msg = `Hi Dirav Labs, I'd like a demo.\nName: ${d.get('name')}\nPhone: ${d.get('phone')}\nBusiness: ${d.get('type')}\nPackage: ${d.get('package')}\nModules: ${$$('.mod.on').map((m) => $('b', m).firstChild.textContent).join(', ')}`;
     $('#formNote').textContent = 'Thank you! Opening WhatsApp…';
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
   });
