@@ -44,7 +44,7 @@
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="Dirav Labs home">
-        <img src="assets/logo-wordmark-dark.png" alt="Dirav Labs">
+        <img src="assets/logo-wordmark-light.png" alt="Dirav Labs" class="logo-on-dark"><img src="assets/logo-wordmark-dark.png" alt="" class="logo-on-light">
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Main">
         <a href="#features">Features</a>
@@ -68,40 +68,21 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
-        <!-- Scene 1: soft blue gradient blobs -->
-        <div class="bg-scene active">
-          <div class="orb orb-1"></div>
-          <div class="orb orb-2"></div>
-          <div class="orb orb-3"></div>
-        </div>
-        <!-- Scene 2: aurora waves -->
-        <div class="bg-scene">
-          <div class="aurora a1"></div>
-          <div class="aurora a2"></div>
-          <div class="aurora a3"></div>
-        </div>
-        <!-- Scene 3: moving dots + light beams -->
-        <div class="bg-scene">
-          <div class="dots-field"></div>
-          <div class="beam b1"></div>
-          <div class="beam b2"></div>
-          <div class="beam b3"></div>
-        </div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
         <div class="grid-lines"></div>
-      </div>
-      <div class="bg-pager" role="group" aria-label="Hero background">
-        <button class="active" aria-label="Background 1"></button>
-        <button aria-label="Background 2"></button>
-        <button aria-label="Background 3"></button>
+        <div class="sparkles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="sweep"></div>
       </div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <span class="eyebrow reveal"><span class="dot"></span> ERP · POS · Ecommerce</span>
+          <span class="eyebrow reveal"><span class="dot"></span> ERP · POS · Ecommerce for Sri Lankan businesses</span>
           <h1 class="reveal">Run your <span class="rotator" id="rotator">shop</span><br>from one smart system.</h1>
           <p class="lead reveal">Sales, stock, orders, delivery, staff and accounts, connected to your own online store. Built in Sri Lanka for Sri Lankan businesses.</p>
           <div class="hero-actions reveal">
-            <a href="#pricing" class="btn btn-primary btn-lg">See packages <svg class="ico"><use href="#i-arrow"/></svg></a>
-            <a href="#contact" class="btn btn-ghost btn-lg">Book a free demo</a>
+            <a href="#pricing" class="btn btn-light btn-lg">Get started now <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a href="#contact" class="play-link"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>Book a free demo</a>
           </div>
           <ul class="hero-points reveal">
             <li><svg class="ico"><use href="#i-check"/></svg> Free setup &amp; training</li>
@@ -111,82 +92,40 @@
         </div>
 
         <div class="hero-visual reveal" aria-hidden="true">
-          <div class="app tilt" id="tilt">
-            <!-- window bar -->
-            <div class="app-bar">
-              <span class="dots"><i></i><i></i><i></i></span>
-              <span class="url"><svg class="ico"><use href="#i-shield"/></svg>app.diravlabs.com/dashboard</span>
+          <!-- POS on a glowing stage, ERP modules orbiting around it -->
+          <div class="stage tilt" id="tilt">
+            <img class="stage-mark" src="assets/logo-mark.png" alt="">
+            <div class="stage-beam"></div>
+            <div class="particles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+            <div class="podium"><span class="ring r1"></span><span class="ring r2"></span><span class="ring pulse"></span></div>
+            <img class="stage-pos" src="assets/device-combo.webp" alt="">
+
+            <div class="orbit3d" id="orbit3d">
+              <span class="chip"><svg class="ico"><use href="#i-pos"/></svg>POS</span>
+              <span class="chip"><svg class="ico"><use href="#i-box"/></svg>Inventory</span>
+              <span class="chip"><svg class="ico"><use href="#i-cart"/></svg>Orders</span>
+              <span class="chip"><svg class="ico"><use href="#i-store"/></svg>Webstore</span>
+              <span class="chip"><svg class="ico"><use href="#i-truck"/></svg>Delivery</span>
+              <span class="chip"><svg class="ico"><use href="#i-chart"/></svg>Accounts</span>
+              <span class="chip"><svg class="ico"><use href="#i-users"/></svg>Staff</span>
             </div>
-            <div class="app-body">
-              <!-- mini sidebar -->
-              <aside class="app-side">
-                <img src="assets/logo-mark.png" alt="" class="app-logo">
-                <span class="s-ico on"><svg class="ico"><use href="#i-chart"/></svg></span>
-                <span class="s-ico"><svg class="ico"><use href="#i-pos"/></svg></span>
-                <span class="s-ico"><svg class="ico"><use href="#i-cart"/></svg></span>
-                <span class="s-ico"><svg class="ico"><use href="#i-box"/></svg></span>
-                <span class="s-ico"><svg class="ico"><use href="#i-truck"/></svg></span>
-                <span class="s-ico"><svg class="ico"><use href="#i-users"/></svg></span>
-              </aside>
 
-              <div class="app-main">
-                <div class="app-head">
-                  <div><small>Monday, 20 Oct</small><b>Good morning, Kasun</b></div>
-                  <span class="branch">Colombo 07 branch</span>
-                  <span class="avatar">KP</span>
-                </div>
-
-                <div class="kpi-row">
-                  <div class="kpi k-blue"><span class="k-ico"><svg class="ico"><use href="#i-chart"/></svg></span><small>Today's sales</small><b>LKR <span class="count" data-to="248500">0</span></b><em class="up">▲ 12.4%</em></div>
-                  <div class="kpi k-green"><span class="k-ico"><svg class="ico"><use href="#i-zap"/></svg></span><small>Gross profit</small><b>LKR <span class="count" data-to="61200">0</span></b><em class="up">▲ 8.1%</em></div>
-                  <div class="kpi k-purple"><span class="k-ico"><svg class="ico"><use href="#i-cart"/></svg></span><small>Orders</small><b class="count" data-to="86">0</b><em class="up">▲ 9 new</em></div>
-                  <div class="kpi k-orange"><span class="k-ico"><svg class="ico"><use href="#i-box"/></svg></span><small>Low stock</small><b class="count" data-to="14">0</b><em class="down">5 critical</em></div>
-                </div>
-
-                <div class="app-grid">
-                  <div class="card chart-card">
-                    <div class="card-h"><b>Revenue</b><span class="legend"><i class="l-blue"></i>This week <i class="l-teal"></i>Last week</span></div>
-                    <svg class="area" viewBox="0 0 300 120" preserveAspectRatio="none">
-                      <defs>
-                        <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a8cf0" stop-opacity=".35"/><stop offset="1" stop-color="#2a8cf0" stop-opacity="0"/></linearGradient>
-                      </defs>
-                      <g class="gridl"><line x1="0" y1="30" x2="300" y2="30"/><line x1="0" y1="60" x2="300" y2="60"/><line x1="0" y1="90" x2="300" y2="90"/></g>
-                      <path class="fill" d="M0 92 C25 88 35 70 50 72 S85 84 100 66 S135 40 150 48 S185 62 200 44 S235 14 250 22 S285 30 300 18 V120 H0Z" fill="url(#gBlue)"/>
-                      <path class="line-b" pathLength="1" d="M0 92 C25 88 35 70 50 72 S85 84 100 66 S135 40 150 48 S185 62 200 44 S235 14 250 22 S285 30 300 18"/>
-                      <path class="line-t" pathLength="1" d="M0 100 C25 96 35 90 50 86 S85 92 100 80 S135 70 150 74 S185 78 200 64 S235 56 250 58 S285 52 300 46"/>
-                      <circle class="pt" cx="250" cy="22" r="4"/>
-                    </svg>
-                    <div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
-                  </div>
-
-                  <div class="card donut-card">
-                    <div class="card-h"><b>Sales channels</b></div>
-                    <div class="donut-body">
-                    <div class="donut"><span><b>86</b><small>orders</small></span></div>
-                    <ul class="ch-list">
-                      <li><i style="background:#2a8cf0"></i>POS<b>48%</b></li>
-                      <li><i style="background:#14b8a6"></i>Webstore<b>32%</b></li>
-                      <li><i style="background:#8b5cf6"></i>Phone<b>12%</b></li>
-                      <li><i style="background:#f59e0b"></i>Wholesale<b>8%</b></li>
-                    </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card orders-card">
-                  <div class="card-h"><b>Recent orders</b><span class="link">View all</span></div>
-                  <div class="o-row"><span class="av" style="background:#dbeafe;color:#1d4ed8">NP</span><div><b>Nimal Perera</b><small>#10482 · Webstore</small></div><span class="amt-s">12,450</span><span class="st st-blue">Shipping</span></div>
-                  <div class="o-row"><span class="av" style="background:#dcfce7;color:#15803d">DF</span><div><b>Dilini Fernando</b><small>#10481 · POS</small></div><span class="amt-s">3,280</span><span class="st st-green">Paid</span></div>
-                </div>
-              </div>
+            <div class="glass hstat s-sales">
+              <small>Today's sales</small>
+              <b>LKR <span class="count" data-to="248500">0</span></b>
+              <span class="mini-bars"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:75%"></i><i style="--h:58%"></i><i style="--h:92%"></i><i style="--h:80%"></i></span>
+              <em>▲ 12.4% vs yesterday</em>
+            </div>
+            <div class="glass hstat s-pay">
+              <span class="s-ico"><svg class="ico"><use href="#i-check"/></svg></span>
+              <div><b>Payment received</b><small id="toastText">Card · LKR 12,450</small></div>
             </div>
           </div>
-
-          <div class="float-card fc-1"><span class="fc-ico fc-green"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Payment received</b><small id="toastText">Card · LKR 12,450</small></div></div>
-          <div class="float-card fc-2"><span class="fc-ico fc-orange"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Stock alert</b><small>Basmati rice 5kg · 4 left</small></div></div>
-          <div class="float-card fc-3"><span class="fc-ico fc-purple"><svg class="ico"><use href="#i-store"/></svg></span><div><b>+3 webstore orders</b><small>in the last hour</small></div></div>
         </div>
       </div>
+      <!-- module ticker along the bottom of the hero -->
+      <div class="hero-ticker" aria-label="Included modules"><div class="ticker-track"><span><svg class="ico"><use href="#i-pos"/></svg>POS billing</span><span><svg class="ico"><use href="#i-box"/></svg>Inventory</span><span><svg class="ico"><use href="#i-cart"/></svg>Orders</span><span><svg class="ico"><use href="#i-store"/></svg>Webstore</span><span><svg class="ico"><use href="#i-truck"/></svg>Delivery</span><span><svg class="ico"><use href="#i-chart"/></svg>Reports</span><span><svg class="ico"><use href="#i-users"/></svg>Customers</span><span><svg class="ico"><use href="#i-shield"/></svg>Users &amp; roles</span><span><svg class="ico"><use href="#i-food"/></svg>Restaurant</span><span><svg class="ico"><use href="#i-tool"/></svg>Service</span><span><svg class="ico"><use href="#i-cloud"/></svg>Cloud backup</span><span><svg class="ico"><use href="#i-zap"/></svg>Fast checkout</span><span aria-hidden="true"><svg class="ico"><use href="#i-pos"/></svg>POS billing</span><span aria-hidden="true"><svg class="ico"><use href="#i-box"/></svg>Inventory</span><span aria-hidden="true"><svg class="ico"><use href="#i-cart"/></svg>Orders</span><span aria-hidden="true"><svg class="ico"><use href="#i-store"/></svg>Webstore</span><span aria-hidden="true"><svg class="ico"><use href="#i-truck"/></svg>Delivery</span><span aria-hidden="true"><svg class="ico"><use href="#i-chart"/></svg>Reports</span><span aria-hidden="true"><svg class="ico"><use href="#i-users"/></svg>Customers</span><span aria-hidden="true"><svg class="ico"><use href="#i-shield"/></svg>Users &amp; roles</span><span aria-hidden="true"><svg class="ico"><use href="#i-food"/></svg>Restaurant</span><span aria-hidden="true"><svg class="ico"><use href="#i-tool"/></svg>Service</span><span aria-hidden="true"><svg class="ico"><use href="#i-cloud"/></svg>Cloud backup</span><span aria-hidden="true"><svg class="ico"><use href="#i-zap"/></svg>Fast checkout</span></div></div>
     </section>
 
     <!-- ===== STATS ===== -->

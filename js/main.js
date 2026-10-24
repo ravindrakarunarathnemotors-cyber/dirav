@@ -75,7 +75,7 @@
 
   // Hero dashboard: grow chart bars when visible
   const mock = $('.app');
-  new IntersectionObserver((entries, o) => {
+  if (mock) new IntersectionObserver((entries, o) => {
     if (entries[0].isIntersecting) { mock.classList.add('in'); o.disconnect(); }
   }, { threshold: 0.3 }).observe(mock);
 
@@ -114,15 +114,38 @@
     scenes.forEach((sc, n) => sc.classList.toggle('active', n === i));
     pager.forEach((b, n) => b.classList.toggle('active', n === i));
   };
-  let sceneTimer = setInterval(() => showScene((si + 1) % scenes.length), 6000);
+  let sceneTimer = scenes.length > 1 ? setInterval(() => showScene((si + 1) % scenes.length), 6000) : null;
   pager.forEach((b, n) => b.addEventListener('click', () => {
     clearInterval(sceneTimer);
     showScene(n);
     sceneTimer = setInterval(() => showScene((si + 1) % scenes.length), 6000);
   }));
 
+  // 3D orbit of module chips around the POS stage
+  const orbit = $('#orbit3d');
+  if (orbit) {
+    const chips = $$('.chip', orbit);
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let t0 = performance.now();
+    const place = (now) => {
+      const t = still ? 0 : (now - t0) / 1000;
+      const w = orbit.clientWidth / 2, h = orbit.clientHeight / 2;
+      chips.forEach((c, i) => {
+        const a = t * 0.35 + (i / chips.length) * Math.PI * 2;
+        const x = Math.cos(a) * w, y = Math.sin(a) * h;
+        const depth = (Math.sin(a) + 1) / 2;            // 0 = back, 1 = front
+        c.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${0.72 + depth * 0.38})`;
+        c.style.opacity = 0.45 + depth * 0.55;
+        c.style.zIndex = depth > 0.5 ? 6 : 1;            // pass behind / in front of the POS
+        c.style.filter = depth < 0.35 ? 'blur(1.5px)' : 'none';
+      });
+      if (!still) requestAnimationFrame(place);
+    };
+    requestAnimationFrame(place);
+  }
+
   // Live "payment received" toast in the hero
-  const toasts = ['Card · LKR 12,450', 'Cash · LKR 3,280', 'Bank transfer · LKR 28,900', 'Card · LKR 7,615'];
+  const toasts = ['Card · LKR 12,450', 'Cash · LKR 3,280', 'QR · LKR 28,900', 'Card · LKR 7,615'];
   const toast = $('#toastText');
   let ti = 0;
   setInterval(() => {
