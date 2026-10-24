@@ -1,0 +1,24 @@
+# Dirav Labs
+
+> Dirav Labs makes a POS system, ERP software and ecommerce webstores for shops and businesses in Sri Lanka. Based at 312/A, Malabe Road, Pannipitiya, Sri Lanka. Phone and WhatsApp: +94 74 111 2504. Email: hello@diravlabs.com.
+
+## Products and pricing (LKR)
+- POS: 15,000 one-time setup + 3,000 per month. Fast barcode billing, receipt printing, cash drawer, inventory, customers and loyalty, daily sales reports.
+- Webstore: 15,000 one-time setup + 3,000 per month. Online store on your own domain, online orders and delivery, card and bank transfer payments.
+- POS + Webstore: 25,000 one-time setup + 2,500 per month. Stock synced between shop and online store, online orders go to the POS, accounts and full reports.
+- Enterprise: custom packages for many branches, restaurants and wholesale.
+- Yearly payment gives two months free. Every package includes installation, staff training, daily cloud backup, free updates and local support.
+
+## Who it is for
+Grocery and retail shops, clothing and shoe shops, mobile and electronics shops (IMEI tracking), gift shops, book shops and stationery, restaurants and cafés, wholesale and distribution, and service businesses in Sri Lanka.
+
+## Key facts
+- Runs in the browser on PC, laptop, tablet and phone. Works with USB/Bluetooth barcode scanners and 58mm/80mm thermal receipt printers.
+- Most shops go live in about five days.
+- Free 30-minute demo, online or at the shop.
+
+## Links
+- [Website](https://diravlabs.com/)
+- [Pricing](https://diravlabs.com/#pricing)
+- [FAQ](https://diravlabs.com/#faq)
+- [Book a demo](https://diravlabs.com/#contact)

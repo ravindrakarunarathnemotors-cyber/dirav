@@ -1,0 +1,8 @@
+{
+  "name": "Dirav Labs",
+  "short_name": "Dirav",
+  "icons": [{ "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }],
+  "theme_color": "#0a1a33",
+  "background_color": "#ffffff",
+  "display": "browser"
+}
